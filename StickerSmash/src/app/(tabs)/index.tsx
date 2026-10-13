@@ -3,10 +3,14 @@ import {Image} from 'expo-image';
 
 const PlaceholderImage = require('@/assets/images/background-image.png');
 
+import ImageViewer from '@/components/Image-viewer';
+
 export default function Index() {
   return (
     <View style={styles.container}>
-      <Image source={PlaceholderImage} style={styles.image} />
+      <View style={styles.imageContainer}>
+        <ImageViewer imgSource={PlaceholderImage} />
+      </View>
     </View>
   );
 }
