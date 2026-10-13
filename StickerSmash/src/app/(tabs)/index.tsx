@@ -4,12 +4,17 @@ import {Image} from 'expo-image';
 const PlaceholderImage = require('@/assets/images/background-image.png');
 
 import ImageViewer from '@/components/Image-viewer';
+import Button from '@/components/button';
 
 export default function Index() {
   return (
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <ImageViewer imgSource={PlaceholderImage} />
+      </View>
+      <View style={styles.footerContainer}>
+        <Button theme="primary" label="Choose a photo" />
+        <Button label="Use this photo" />
       </View>
     </View>
   );
@@ -24,10 +29,9 @@ const styles = StyleSheet.create({
   imageContainer:{
     flex: 1,
   },
-  image: {
-    width: 300,
-    height: 340,
-    borderRadius: 18,
+  footerContainer: {
+    flex: 1/3,
+    alignItems: 'center',
   }
 });
 
